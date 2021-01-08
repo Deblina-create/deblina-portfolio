@@ -1,0 +1,10 @@
+name = "deblina-portfolio"
+type = "webpack"
+account_id = "ba21356bd984b1ecf72b4713914bdd57"
+workers_dev = true
+route = ""
+zone_id = ""
+
+[site]
+bucket = "./dist"
+entry-point = "workers-site"
