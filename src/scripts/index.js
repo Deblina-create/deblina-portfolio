@@ -1,4 +1,3 @@
-import {PageFlip} from 'page-flip';
 
 /*===== MENU SHOW =====*/ 
 const showMenu = (toggleId, navMenuSelector) =>{
@@ -27,6 +26,18 @@ function linkAction(){
 }
 navLink.forEach(n => n.addEventListener('click', linkAction));
 
+
+/*====Image Animation====*/
+
+const effect = new hoverEffect({
+  parent: document.querySelector('.home__img'),
+  intensity: 0.2,
+  image1: 'assets/images/new.jpg',
+  image2: 'assets/images/pm.png', 
+  
+  displacementImage: 'assets/images/heightMap.png'
+});
+
 /*===== SCROLL REVEAL ANIMATION =====*/
 const sr = ScrollReveal({
     origin: 'top',
@@ -42,14 +53,14 @@ sr.reveal('.home__img',{delay: 400});
 sr.reveal('.home__social-icon',{ interval: 200}); 
 
 /*SCROLL ABOUT*/
-sr.reveal('.about__img',{}); 
-sr.reveal('.about__subtitle',{delay: 400,  afterReveal: function (el) {
+//sr.reveal('.about__img',{}); 
+sr.reveal('.about__subtitle',{delay: 200,  afterReveal: function (el) {
   el.style.color = "#4B4B4D";
 }, beforeReveal: function (el) {
   el.style.color = "#4B4B4D";
 }
 }); 
-sr.reveal('.about__text',{delay: 1200,  afterReveal: function (el) {
+sr.reveal('.about__text',{delay: 800,  afterReveal: function (el) {
   el.style.color = "#4B4B4D";
 }, beforeReveal: function (el) {
   el.style.color = "#4B4B4D";
@@ -59,7 +70,7 @@ sr.reveal('.about__text',{delay: 1200,  afterReveal: function (el) {
 
 
 /*SCROLL WORK*/
-sr.reveal('.work__img',{interval: 200}); 
+//sr.reveal('.work__img',{interval: 200}); 
 
 /*SCROLL CONTACT*/
 sr.reveal('.contact__input',{interval: 200}); 
@@ -136,37 +147,5 @@ class TypeWriter {
 //Typewriting ends
 
 
-// about starts
 
-
-
-
-//page flip starts
-
-$(document).ready(function(){
-  $("#flipbook").turn({
-		width: 400,
-		height: 300,
-		autoCenter: true
-});
-
-$("#pageFld").val($("#flipbook").turn("page"));
-
-$("#flipbook").bind("turned", function(event, page, view) {
-		$("#pageFld").val(page);
-});
-
-$("#pageFld").change(function() {
-		$("#flipbook").turn("page", $(this).val());
-});
-
-$("#prevBtn").click(function() {
-		$("#flipbook").turn("previous");
-});
-
-$("#nextBtn").click(function() {
-		$("#flipbook").turn("next");
-});
-    
-});
 
