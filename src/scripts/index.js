@@ -32,7 +32,7 @@ navLink.forEach(n => n.addEventListener('click', linkAction));
 const effect = new hoverEffect({
   parent: document.querySelector('.home__img'),
   intensity: 0.2,
-  image1: 'assets/images/new.jpg',
+  image1: 'assets/images/yyy.png',
   image2: 'assets/images/pm.png', 
   
   displacementImage: 'assets/images/heightMap.png'
