@@ -9,8 +9,11 @@
         
         <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
-   
+        <!--<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>-->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        
         
         <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
         
@@ -27,7 +30,7 @@
                 <div id="nav-toggle">
                     <i class="fas fa-bars"></i>
                 </div>
-                <div id="nav-menu-container">
+                <div class="" id="nav-menu-container">
                     <ul class="nav-menu">
                         <li class=""><a href="#home" class="nav__link active">Home</a></li>
                         <li class=""><a href="#about" class="nav__link">About</a></li>
@@ -89,60 +92,59 @@
                 </h3>
             </section>
         
- <!--===== WORK =====-->
+
+            <!--===== WORK =====-->
             <section class="work section" id="work">
                 <h2 class="section-title">Work</h2>
-                <div class="cards-list">
-  
-                    <div class="card 1">
-                      <div class="card_image"> <img src="assets/images/9UDTTBc.jpeg" /> </div>
-                      <div class="card_title ">
-                        <p class="description">HTML-CSS-Jquery</p>
-                        <a class="link" href="https://deblinaray.com/juicyfruits/" target="_blank">Demo</a>
-                        <a class="link"href="https://github.com/Deblina-create/juicyfruits" target="_blank">Code</a>
-                       
-                      </div>
-                    </div>
-                    
-                      <div class="card 2">
-                      <div class="card_image">
-                        <img src="assets/images/todo.PNG" />
+                <div class="workContainer">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                          <div class="flip-card-front">
+                            <img src="assets/images/Capture1.jpg" alt="Avatar" >
+                          </div>
+                          <div class="flip-card-back">
+                            <h1>First Project</h1> 
+                            <p>HTML-CSS-Bootstrap</p> 
+                            <div class="workIcons">
+                                <div class="wicon wicon-fill"><a href="MyPlantStore/">Demo</a></div>
+                                <div class="wicon wicon-fill"><a href="https://github.com/Deblina-create/MyPlantStore">Code</a></div>
+                            </div>
+                          </div>
                         </div>
-                      <div class="card_title ">
-                        <p class="description">SCSS-JavaScript-GULP</p>
-                        <a class="link"href="https://deblinaray.com/ToDoApp/" target="_blank">Demo</a>
-                        <a class="link" href="https://github.com/Deblina-create/ToDoApp" target="_blank">Code</a>
-                        
                       </div>
-                    </div>
-                    
-                    <div class="card 3">
-                      <div class="card_image">
-                        <img src="assets/images/Capture.PNG" />
-                      </div>
-                      <div class="card_title">
-                        <p class="description">HTML-CSS-Bootstrap</p>
-                        <a class="link" href="https://deblinaray.com/MyPlantStore/" target="_blank">Demo</a>
-                        <a class="link" href="https://github.com/Deblina-create/MyPlantStore" target="_blank">Code</a>
-                        
-                      </div>
-                    </div>
-                      
-                      <div class="card 4">
-                      <div class="card_image">
-                        <img src="assets/images/filmzy.PNG" />
+                      <div class="flip-card">
+                        <div class="flip-card-inner">
+                          <div class="flip-card-front">
+                            <img src="assets/images/todo1.jpg" alt="Avatar" >
+                          </div>
+                          <div class="flip-card-back">
+                            <h1>JavaScript Project</h1> 
+                            <p>HTML-SCSS-JavaScript-GULP</p> 
+                            <div class="workIcons">
+                                <div class="wicon wicon-fill"><a href="/ToDoApp/">Demo</a></div>
+                                <div class="wicon wicon-fill"><a href="https://github.com/Deblina-create/ToDoApp">Code</a></div>
+                            </div>
+                          </div>
                         </div>
-                      <div class="card_title white">
-                        <p class="description">Node-express-mongo-ejs</p>
-                        <a class="link" href="https://filmzy.herokuapp.com/" target="_blank">Demo</a>
-                        <a class="link" href="https://github.com/Deblina-create/filmzy" target="_blank">Code</a>
                       </div>
+                      <div class="flip-card">
+                        <div class="flip-card-inner">
+                          <div class="flip-card-front">
+                            <img src="assets/images/JF1.jpg" alt="Avatar">
+                          </div>
+                          <div class="flip-card-back">
+                            <h1>e-CommerceProject</h1> 
+                            <p>HTML-CSS-Jquery</p> 
+                            <div class="workIcons">
+                                <div class="wicon wicon-fill"><a href="/juicyfruits/">Demo</a></div>
+                                <div class="wicon wicon-fill"><a href="https://github.com/Deblina-create/juicyfruits">Code</a></div>
+                            </div>
+                          </div>
+                        </div>
                       </div>
-                    
-                    </div>
-                
+                   
+            </div>
             </section>
-
 
             <!--===== CONTACT =====-->
             <section class="contact section" id="contact">

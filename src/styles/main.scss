@@ -12,17 +12,6 @@
 body{
   background:black;
 }
-.bd-grid{
-  max-width: 1024px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  //grid-template-columns: 100%;
-  //grid-column-gap: 2rem;
-  //width: calc(100% - 4rem);
-  margin-left: 1rem;
-  margin-right: 1rem;
-}
 
 /*BUTTONS*/ 
 
@@ -101,7 +90,7 @@ body{
     height: 5rem;
     padding: 15px;
     position: fixed;
-    width: 100%;
+    width: 90%;
     z-index: 1;
    
     
@@ -114,10 +103,7 @@ body{
         .nav-first-item{
             position: absolute;
             
-            .nav__logo{
-              //color: rgb(253, 99, 43);
-
-            }
+            
         }
         #nav-menu-container{
             display: flex;
@@ -175,7 +161,7 @@ body{
                     height: 200px;
                     border-radius: 50%;
                     padding: 1.5rem;
-                    background-color: rgba(255, 127, 80, 0.7);
+                    background-color: rgba(253, 99, 43, 0.6);
                     
                     transition: .5s;
                     box-shadow: 0 10px 10px rgba(255, 127, 80, 0.2), 0px 0px 50px rgba(255, 127, 80, 0.2);
@@ -223,7 +209,7 @@ body{
                 height: 200px;
                 border-radius: 50%;
                 padding: 1.5rem;
-                background-color: rgba(255, 127, 80, 0.7);
+                background-color: rgba(253, 99, 43, 0.6);
                 
                 transition: .5s;
                 box-shadow: 0 10px 10px rgba(255, 127, 80, 0.2), 0px 0px 50px rgba(255, 127, 80, 0.2);
@@ -252,6 +238,7 @@ body{
     }
 }
 }
+
 
 
 /*===== HOME =====*/
@@ -637,135 +624,99 @@ html {
 
 /*====work====*/
 
- .workContainer{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+.cards-list {
+  z-index: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
 
-    
-    
- }
+.card {
+  margin: 30px auto;
+  width: 300px;
+  height: 300px;
+  border-radius: 40px;
+box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.22);
+  cursor: pointer;
+  transition: 0.4s;
+}
 
- .flip-card {
-    background-color: transparent;
-    width: 300px;
-    height: 300px;
-    perspective: 1000px;
-  }
-  
-  .flip-card-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: transform 0.6s;
-    transform-style: preserve-3d;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  }
-  
-  .flip-card:hover .flip-card-inner {
-    transform: rotateY(180deg);
-  }
-  
-  .flip-card-front, .flip-card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-  }
-  
-  .flip-card-front {
-    width: 300px;
-    height: 300px;
-    
-  }
-  
-  .flip-card-back {
-    //background-color: rgb(253, 99, 43);
-    opacity: 0.7;
-    color:rgb(253, 99, 43);
-    transform: rotateY(180deg);
-  }
-  .wicon{
-    cursor: pointer;
-    position: relative;
-    display: inline-block;
-    
-    width: 80px;
-    height: 80px;
-    margin-left: 10px;
-    margin-right: 10px;
-    border-radius: 50%;
-    padding-top:25px ;
-    margin-top:70px;
-    overflow: hidden;
-    &::before, &::after{
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: 100%;
-      transition: all 0.25s ease;
-      border-radius: 50%;
-      
-    }
-    a{
-      position: relative;
-      color:rgb(185, 53, 4) ;
-      font-size: 15px;
-      font-weight: 600;
-      margin-top: 30px;
-      padding-top:25px;
-      margin-left: 4px;
-      transition: all 0.25s ease;
-      background:none;
-      z-index: 2000;
-      text-decoration: none;
-    }
-  }
-  
-  .wicon-fill{
-    &::before{
-      transition-duration: 0.5s;
-      box-shadow: inset 0 0 0 1px rgb(253, 99, 43);
-    }
-    &:hover::before{
-      box-shadow: inset 0 0 0 50px rgb(253, 99, 43);
-    }
-  }
+.card .card_image {
+  width: inherit;
+  height: inherit;
+  border-radius: 40px;
+}
 
-  @media screen and (max-width: 400px){
-    .workContainer{
-      margin-bottom: 50px;
-      .flip-card-inner {
-        position: relative;
-        width: 100%;
-        height: 100%;
-        text-align: center;
-        transition: transform 0.6s;
-        transform-style: preserve-3d;
-        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-      }
-      .flip-card-front, .flip-card-back {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        -webkit-backface-visibility: hidden;
-        backface-visibility: hidden;
-      }
-      .flip-card-front {
-      //  background-image:"assets/image/back.jpg";
-        
-      }
-      .flip-card-back {
-        //background-color: rgb(253, 99, 43);
-        opacity: 0.7;
-        color:rgb(253, 99, 43);
-        transform: rotateY(180deg);
-        text-align:center;
-      }
-    }
+.card .card_image img {
+  width: inherit;
+  height: inherit;
+  border-radius: 40px;
+  object-fit: cover;
+}
+
+.card .card_title {
+  text-align: center;
+  border-radius: 0px 0px 40px 40px;
+  
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: -80px;
+  height: 40px;
+  z-index: 1;
+}
+
+.card:hover {
+  transform: scale(0.9, 0.9);
+  box-shadow: 5px 5px 30px 15px rgba(0,0,0,0.25), 
+    -5px -5px 30px 15px rgba(0,0,0,0.22);
+}
+
+.title{
+  color: black;
+}
+.white{
+  color: #fff;
+}
+.description{
+  background-color: rgb(77, 75, 75);
+  height: 30px;
+  margin-bottom: 10px;
+}
+.link{
+  height: 30px;
+  width: 60px;
+  border-radius: 30px;
+  background-color:  rgba(253, 99, 43, 0.6);
+  color: #fff;
+  padding: 10px;
+  margin-top: 30px;
+}
+
+
+
+@media all and (max-width: 500px) {
+  .card-list {
+    /* On small screens, we are no longer using row direction but column */
+    flex-direction: column;
   }
+}
+
+
+/*
+.card {
+  margin: 30px auto;
+  width: 300px;
+  height: 300px;
+  border-radius: 40px;
+  background-image: url('https://i.redd.it/b3esnz5ra34y.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-repeat: no-repeat;
+box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.22);
+  transition: 0.4s;
+}
+*/
+
   
